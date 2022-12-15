@@ -2,7 +2,7 @@ const { findById } = require("../model/student");
 const studentModel = require("../model/student");
 
 module.exports = {
-  createStudent: async (req, res) => {
+  createStudent: async (req, res, next) => {
     try {
       let { name, subject, marks } = req.body;
       let userId = req.payLoad.userId;
